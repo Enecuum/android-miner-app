@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/vToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        app:elevation="16dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/btnBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:src="@drawable/ic_action_back"
+                app:tint="@color/colorBlack"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/settings"
+                android:textColor="@color/colorBlue"
+                android:textSize="22sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/colorPrimaryLight"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/vToolbar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="16dp">
+
+            <View
+                android:id="@+id/vSettingAbout"
+                android:layout_width="0dp"
+                android:layout_height="180dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="4dp"
+                android:background="@drawable/rectangle_round_blue"
+                app:layout_constraintEnd_toStartOf="@id/vSettingAddress"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imgAbout"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_marginTop="42dp"
+                android:src="@drawable/ic_menu"
+                app:layout_constraintEnd_toEndOf="@id/vSettingAbout"
+                app:layout_constraintStart_toStartOf="@id/vSettingAbout"
+                app:layout_constraintTop_toTopOf="@id/vSettingAbout" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"
+                android:gravity="center"
+                android:maxLines="2"
+                android:text="@string/about"
+                android:textColor="@color/colorWhite"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@id/vSettingAbout"
+                app:layout_constraintEnd_toEndOf="@id/vSettingAbout"
+                app:layout_constraintStart_toStartOf="@id/vSettingAbout"
+                app:layout_constraintTop_toBottomOf="@id/imgAbout" />
+
+            <View
+                android:id="@+id/vSettingCommunity"
+                android:layout_width="0dp"
+                android:layout_height="180dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/rectangle_round_blue"
+                app:layout_constraintEnd_toEndOf="@id/vSettingAddress"
+                app:layout_constraintStart_toStartOf="@id/vSettingAddress"
+                app:layout_constraintTop_toBottomOf="@id/vSettingAbout" />
+
+            <ImageView
+                android:id="@+id/imgCommunity"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_marginTop="42dp"
+                android:src="@drawable/ic_community"
+                app:layout_constraintEnd_toEndOf="@id/vSettingCommunity"
+                app:layout_constraintStart_toStartOf="@id/vSettingCommunity"
+                app:layout_constraintTop_toTopOf="@id/vSettingCommunity" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/community"
+                android:textColor="@color/colorWhite"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@id/vSettingCommunity"
+                app:layout_constraintEnd_toEndOf="@id/vSettingCommunity"
+                app:layout_constraintStart_toStartOf="@id/vSettingCommunity"
+                app:layout_constraintTop_toBottomOf="@id/imgCommunity" />
+
+            <View
+                android:id="@+id/vSettingKeys"
+                android:layout_width="0dp"
+                android:layout_height="180dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/rectangle_round_blue"
+                app:layout_constraintEnd_toEndOf="@id/vSettingAbout"
+                app:layout_constraintStart_toStartOf="@id/vSettingAbout"
+                app:layout_constraintTop_toBottomOf="@id/vSettingAddress" />
+
+            <ImageView
+                android:id="@+id/imgKeys"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_marginTop="42dp"
+                android:src="@drawable/ic_keys"
+                app:layout_constraintEnd_toEndOf="@id/vSettingKeys"
+                app:layout_constraintStart_toStartOf="@id/vSettingKeys"
+                app:layout_constraintTop_toTopOf="@id/vSettingKeys" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/private_key"
+                android:textColor="@color/colorWhite"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@id/vSettingKeys"
+                app:layout_constraintEnd_toEndOf="@id/vSettingKeys"
+                app:layout_constraintStart_toStartOf="@id/vSettingKeys"
+                app:layout_constraintTop_toBottomOf="@id/imgKeys" />
+
+            <View
+                android:id="@+id/vSettingAddress"
+                android:layout_width="0dp"
+                android:layout_height="180dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/rectangle_round_blue"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/vSettingAbout"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imgAddress"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_marginTop="42dp"
+                android:src="@drawable/ic_address"
+                app:layout_constraintEnd_toEndOf="@id/vSettingAddress"
+                app:layout_constraintStart_toStartOf="@id/vSettingAddress"
+                app:layout_constraintTop_toTopOf="@id/vSettingAddress" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/my_address"
+                android:textColor="@color/colorWhite"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@id/vSettingAddress"
+                app:layout_constraintEnd_toEndOf="@id/vSettingAddress"
+                app:layout_constraintStart_toStartOf="@id/vSettingAddress"
+                app:layout_constraintTop_toBottomOf="@id/imgAddress" />
+
+            <View
+                android:id="@+id/vSettingFaq"
+                android:layout_width="0dp"
+                android:layout_height="180dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/rectangle_round_blue"
+                app:layout_constraintEnd_toEndOf="@id/vSettingKeys"
+                app:layout_constraintStart_toStartOf="@id/vSettingKeys"
+                app:layout_constraintTop_toBottomOf="@id/vSettingKeys" />
+
+            <ImageView
+                android:id="@+id/imgFaq"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_marginTop="42dp"
+                android:src="@drawable/ic_info"
+                app:layout_constraintEnd_toEndOf="@id/vSettingFaq"
+                app:layout_constraintStart_toStartOf="@id/vSettingFaq"
+                app:layout_constraintTop_toTopOf="@id/vSettingFaq" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:gravity="center"
+                android:maxLines="2"
+                android:text="@string/faq"
+                android:textColor="@color/colorWhite"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@id/vSettingFaq"
+                app:layout_constraintEnd_toEndOf="@id/vSettingFaq"
+                app:layout_constraintStart_toStartOf="@id/vSettingFaq"
+                app:layout_constraintTop_toBottomOf="@id/imgFaq" />
+
+            <View
+                android:id="@+id/vSettingLang"
+                android:layout_width="0dp"
+                android:layout_height="180dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/rectangle_round_blue"
+                app:layout_constraintEnd_toEndOf="@id/vSettingCommunity"
+                app:layout_constraintStart_toStartOf="@id/vSettingCommunity"
+                app:layout_constraintTop_toBottomOf="@id/vSettingKeys" />
+
+            <ImageView
+                android:id="@+id/imgSettingLang"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_marginTop="42dp"
+                android:src="@drawable/ic_web_white_48dp"
+                app:layout_constraintEnd_toEndOf="@id/vSettingLang"
+                app:layout_constraintStart_toStartOf="@id/vSettingLang"
+                app:layout_constraintTop_toTopOf="@id/vSettingLang" />
+
+            <TextView
+                android:id="@+id/lblSettingLang"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/language"
+                android:textColor="@color/colorWhite"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@id/vSettingLang"
+                app:layout_constraintEnd_toEndOf="@id/vSettingLang"
+                app:layout_constraintStart_toStartOf="@id/vSettingLang"
+                app:layout_constraintTop_toBottomOf="@id/imgSettingLang" />
+
+            <View
+                android:id="@+id/vSettingUrl"
+                android:layout_width="0dp"
+                android:layout_height="180dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/rectangle_round_settings"
+                app:layout_constraintEnd_toEndOf="@id/vSettingFaq"
+                app:layout_constraintStart_toStartOf="@id/vSettingFaq"
+                app:layout_constraintTop_toBottomOf="@id/vSettingFaq" />
+
+            <ImageView
+                android:id="@+id/imgSettingUrl"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_marginTop="42dp"
+                android:src="@drawable/ic_entry"
+                app:layout_constraintEnd_toEndOf="@id/vSettingUrl"
+                app:layout_constraintStart_toStartOf="@id/vSettingUrl"
+                app:layout_constraintTop_toTopOf="@id/vSettingUrl" />
+
+            <TextView
+                android:id="@+id/lblSettingUrl"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/entry_point"
+                android:textColor="@color/colorWhite"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@id/vSettingUrl"
+                app:layout_constraintEnd_toEndOf="@id/vSettingUrl"
+                app:layout_constraintStart_toStartOf="@id/vSettingUrl"
+                app:layout_constraintTop_toBottomOf="@id/imgSettingUrl" />
+
+            <View
+                android:id="@+id/vSettingReferral"
+                android:layout_width="0dp"
+                android:layout_height="180dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/rectangle_round_settings"
+                app:layout_constraintEnd_toEndOf="@id/vSettingCommunity"
+                app:layout_constraintStart_toStartOf="@id/vSettingCommunity"
+                app:layout_constraintTop_toBottomOf="@id/vSettingLang" />
+
+            <ImageView
+                android:id="@+id/imgSettingReferral"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_marginTop="42dp"
+                android:src="@drawable/ic_referral_settings"
+                app:layout_constraintEnd_toEndOf="@id/vSettingReferral"
+                app:layout_constraintStart_toStartOf="@id/vSettingReferral"
+                app:layout_constraintTop_toTopOf="@id/vSettingReferral" />
+
+            <TextView
+                android:id="@+id/lblSettingReferral"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/referral_program"
+                android:textColor="@color/colorWhite"
+                android:textSize="18sp"
+                app:layout_constraintTop_toBottomOf="@id/imgSettingReferral"
+                app:layout_constraintBottom_toBottomOf="@id/vSettingReferral"
+                app:layout_constraintEnd_toEndOf="@id/vSettingReferral"
+                app:layout_constraintStart_toStartOf="@id/vSettingReferral" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                app:layout_constraintTop_toBottomOf="@id/vSettingReferral" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+<!--    <View-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="6dp"-->
+<!--        android:background="@drawable/shadow"-->
+<!--        android:rotation="180"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/vToolbar" />-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

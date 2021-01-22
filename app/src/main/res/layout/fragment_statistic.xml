@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/vToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:visibility="visible"
+        app:elevation="16dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/btnSettings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="0dp"
+                android:src="@drawable/ic_menu"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_entry"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/btnBuy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/buy_enq"
+                android:background="@drawable/rectangle_round_accent"
+                android:textColor="@color/colorWhite"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:paddingTop="8dp"
+                android:textSize="12sp"
+                android:paddingBottom="8dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="6dp"
+        android:background="@drawable/shadow"
+        android:rotation="180"
+        app:layout_constraintTop_toBottomOf="@id/vToolbar" />
+
+    <ImageView
+        android:id="@+id/imgAccounts"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="22dp"
+        android:src="@drawable/is_stat_accounts"
+        app:layout_constraintEnd_toStartOf="@id/imgCurrTps"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/vToolbar" />
+
+    <TextView
+        android:id="@+id/lblAccountsVal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text=""
+        android:textColor="@color/textColorWhiteSemitransparent"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/imgAccounts"
+        app:layout_constraintStart_toStartOf="@id/imgAccounts"
+        app:layout_constraintTop_toBottomOf="@id/imgAccounts" />
+
+    <TextView
+        android:id="@+id/lblAccountsTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="@string/accouts"
+        android:textColor="@color/textColorWhiteSemitransparent"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@id/imgAccounts"
+        app:layout_constraintStart_toStartOf="@id/imgAccounts"
+        app:layout_constraintTop_toBottomOf="@id/lblAccountsVal" />
+
+    <ImageView
+        android:id="@+id/imgCurrTps"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="22dp"
+        android:src="@drawable/is_stat_currtps"
+        app:layout_constraintEnd_toStartOf="@id/imgMaxTps"
+        app:layout_constraintStart_toEndOf="@id/imgAccounts"
+        app:layout_constraintTop_toBottomOf="@id/vToolbar" />
+
+    <TextView
+        android:id="@+id/lblCurrTpsVal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text=""
+        android:textColor="@color/textColorWhiteSemitransparent"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/imgCurrTps"
+        app:layout_constraintStart_toStartOf="@id/imgCurrTps"
+        app:layout_constraintTop_toBottomOf="@id/imgCurrTps" />
+
+    <TextView
+        android:id="@+id/lblCurrTpsTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="@string/curr_tps"
+        android:textColor="@color/textColorWhiteSemitransparent"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@id/imgCurrTps"
+        app:layout_constraintStart_toStartOf="@id/imgCurrTps"
+        app:layout_constraintTop_toBottomOf="@id/lblCurrTpsVal" />
+
+    <ImageView
+        android:id="@+id/imgMaxTps"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="22dp"
+        android:src="@drawable/is_stat_maxtps"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/imgCurrTps"
+        app:layout_constraintTop_toBottomOf="@id/vToolbar" />
+
+    <TextView
+        android:id="@+id/lblMaxTpsVal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text=""
+        android:textColor="@color/textColorWhiteSemitransparent"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/imgMaxTps"
+        app:layout_constraintStart_toStartOf="@id/imgMaxTps"
+        app:layout_constraintTop_toBottomOf="@id/imgMaxTps" />
+
+    <TextView
+        android:id="@+id/lblMaxTpsTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="@string/max_tps"
+        android:textColor="@color/textColorWhiteSemitransparent"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@id/imgMaxTps"
+        app:layout_constraintStart_toStartOf="@id/imgMaxTps"
+        app:layout_constraintTop_toBottomOf="@id/lblMaxTpsVal" />
+
+    <WebView
+        android:id="@+id/wvMap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/vMapHider"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/colorPrimary"
+        app:layout_constraintBottom_toTopOf="@id/imgPoaNodes"
+        app:layout_constraintTop_toBottomOf="@id/lblMaxTpsTitle" />
+
+    <ProgressBar
+        android:id="@+id/vProgress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/lblMapLoading"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/lblMapLoading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:text="@string/map_loading"
+        android:textColor="@color/textColorWhiteSemitransparent"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toEndOf="@id/vProgress"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/vNew"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/pill_accent"
+        app:layout_constraintBottom_toBottomOf="@id/lblExplorerAction"
+        app:layout_constraintEnd_toEndOf="@id/lblExplorer"
+        app:layout_constraintStart_toStartOf="@id/lblExplorer"
+        app:layout_constraintTop_toTopOf="@id/lblExplorer" />
+
+    <TextView
+        android:id="@+id/lblExplorer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="48dp"
+        android:gravity="center"
+        android:paddingStart="48dp"
+        android:paddingTop="8dp"
+        android:paddingEnd="48dp"
+        android:paddingBottom="4dp"
+        android:text="@string/enq_blockchain_ex"
+        android:textColor="@color/colorWhite"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@id/imgPoaNodes"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/lblExplorerAction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:paddingBottom="8dp"
+        android:text="@string/open_in_browser"
+        android:textColor="@color/colorWhite"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lblExplorer" />
+
+    <ImageView
+        android:id="@+id/imgPoaNodes"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginBottom="8dp"
+        android:src="@drawable/ic_stat_poa"
+        app:layout_constraintBottom_toTopOf="@id/lblPoaNodesVal"
+        app:layout_constraintEnd_toStartOf="@id/imgCurrTps"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/lblPoaNodesVal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:text=""
+        android:textColor="@color/textColorWhiteSemitransparent"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/lblPoaNodesTitle"
+        app:layout_constraintEnd_toEndOf="@id/imgPoaNodes"
+        app:layout_constraintStart_toStartOf="@id/imgPoaNodes" />
+
+    <TextView
+        android:id="@+id/lblPoaNodesTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="@string/poa_nodes"
+        android:textColor="@color/textColorWhiteSemitransparent"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/imgPoaNodes"
+        app:layout_constraintStart_toStartOf="@id/imgPoaNodes" />
+
+    <ImageView
+        android:id="@+id/imgPowNodes"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginBottom="8dp"
+        android:src="@drawable/ic_stat_pow"
+        app:layout_constraintBottom_toTopOf="@id/lblPoaNodesVal"
+        app:layout_constraintEnd_toStartOf="@id/imgPosNodes"
+        app:layout_constraintStart_toEndOf="@id/imgPoaNodes" />
+
+    <TextView
+        android:id="@+id/lblPowNodesVal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:text=""
+        android:textColor="@color/textColorWhiteSemitransparent"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/lblPowNodesTitle"
+        app:layout_constraintEnd_toEndOf="@id/imgPowNodes"
+        app:layout_constraintStart_toStartOf="@id/imgPowNodes" />
+
+    <TextView
+        android:id="@+id/lblPowNodesTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/pow_nodes"
+        android:textColor="@color/textColorWhiteSemitransparent"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/imgPowNodes"
+        app:layout_constraintStart_toStartOf="@id/imgPowNodes" />
+
+    <ImageView
+        android:id="@+id/imgPosNodes"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginBottom="8dp"
+        android:src="@drawable/ic_stat_pos"
+        app:layout_constraintBottom_toTopOf="@id/lblPoaNodesVal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/imgPowNodes" />
+
+    <TextView
+        android:id="@+id/lblPosNodesVal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:text=""
+        android:textColor="@color/textColorWhiteSemitransparent"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/lblPosNodesTitle"
+        app:layout_constraintEnd_toEndOf="@id/imgPosNodes"
+        app:layout_constraintStart_toStartOf="@id/imgPosNodes" />
+
+    <TextView
+        android:id="@+id/lblPosNodesTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/pos_nodes"
+        android:textColor="@color/textColorWhiteSemitransparent"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/imgPosNodes"
+        app:layout_constraintStart_toStartOf="@id/imgPosNodes" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

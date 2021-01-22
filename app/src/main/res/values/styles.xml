@@ -1,0 +1,39 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="colorControlNormal">@color/textColorWhiteSemitransparent</item>
+        <item name="colorControlActivated">@color/colorAccent</item>
+        <item name="colorControlHighlight">@color/colorAccent</item>
+
+        <item name= "android:textViewStyle">@style/TextViewStyle</item>
+        <item name="android:statusBarColor">@color/colorBlue</item>
+
+        <item name="android:forceDarkAllowed">false</item>
+    </style>
+
+    <style name="AccentTheme" parent="AppTheme">
+        <item name="colorAccent">@color/colorBlue</item>
+    </style>
+
+    <style name="BottomSheet" parent="@style/Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/rectangle_rounded_top_corners_white</item>
+    </style>
+
+    <style name="BaseBottomSheetDialog" parent="@style/Theme.Design.Light.BottomSheetDialog">
+        <item name="android:windowIsFloating">false</item>
+        <item name="bottomSheetStyle">@style/BottomSheet</item>
+    </style>
+
+    <style name="BottomSheetDialogTheme" parent="BaseBottomSheetDialog" />
+
+    <style name="TextViewStyle" parent="android:Widget.TextView">
+        <item name= "android:fontFamily">@font/light</item>
+    </style>
+
+</resources>

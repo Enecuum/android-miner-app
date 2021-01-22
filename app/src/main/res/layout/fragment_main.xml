@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBlue"
+    tools:context=".vvm.host_main.MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/vToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        app:elevation="16dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/btnSettings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="0dp"
+                android:src="@drawable/ic_menu"
+                app:tint="@color/colorBlack"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:text="@string/logo_name"
+                android:textSize="26dp"
+                android:fontFamily="@font/chanel_400"
+                android:textColor="@color/colorBlue"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/btnBuy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/rectangle_round_accent"
+                android:paddingStart="12dp"
+                android:paddingTop="8dp"
+                android:paddingEnd="12dp"
+                android:paddingBottom="8dp"
+                android:text="@string/buy_enq"
+                android:textColor="@color/colorBlue"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <!--    <View-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="6dp"-->
+    <!--        android:background="@drawable/shadow"-->
+    <!--        android:rotation="180"-->
+    <!--        app:layout_constraintTop_toBottomOf="@id/vToolbar" />-->
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        app:layout_constraintBottom_toTopOf="@id/btnStart"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/vCard" />
+
+    <View
+        android:id="@+id/vCard"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/card_balance"
+        app:layout_constraintBottom_toTopOf="@id/view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/vToolbar"
+        app:layout_constraintVertical_chainStyle="spread_inside" />
+
+    <TextView
+        android:id="@+id/lblBalance"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="20dp"
+        android:text="@string/balance"
+        android:gravity="center_vertical"
+        android:textColor="@color/colorBlack"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@id/separator"
+        app:layout_constraintStart_toStartOf="@id/vCard"
+        app:layout_constraintTop_toTopOf="@id/vCard" />
+
+    <TextView
+        android:id="@+id/lblAmount"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="18dp"
+        android:ellipsize="end"
+        android:lines="1"
+        android:singleLine="true"
+        android:text="0.0"
+        android:textAlignment="viewEnd"
+        android:textColor="@color/colorBlue"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/lblEnq"
+        app:layout_constraintStart_toEndOf="@+id/lblBalance"
+        app:layout_constraintTop_toTopOf="@id/vCard"
+        tools:text="828.12345678" />
+
+    <TextView
+        android:id="@+id/lblEnq"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="20dp"
+        android:lines="1"
+        android:text="@string/enq_value_cut"
+        android:textColor="@color/colorBlue"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/vCard"
+        app:layout_constraintTop_toTopOf="@id/vCard" />
+
+    <View
+        android:id="@+id/separator"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/colorGray"
+        android:layout_marginTop="18dp"
+        app:layout_constraintTop_toBottomOf="@id/lblAmount"
+        app:layout_constraintStart_toStartOf="@id/vCard"
+        app:layout_constraintEnd_toEndOf="@id/vCard"
+        app:layout_constraintBottom_toTopOf="@id/lblCourse"/>
+
+    <TextView
+        android:id="@+id/lblCourse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:textColor="@color/colorBlue"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@id/vCard"
+        app:layout_constraintStart_toStartOf="@id/vCard"
+        app:layout_constraintTop_toBottomOf="@id/separator" />
+
+    <TextView
+        android:id="@+id/lblConverted"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="10dp"
+        android:textColor="@color/colorBlue"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@id/vCard"
+        app:layout_constraintEnd_toEndOf="@id/vCard"
+        app:layout_constraintTop_toBottomOf="@id/separator" />
+
+    <ImageView
+        android:id="@+id/btnStart"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:src="@drawable/circle_grey"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/vCard"
+        app:layout_constraintVertical_chainStyle="spread_inside" />
+
+    <TextView
+        android:id="@+id/btnActText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:padding="8dp"
+        android:text="@string/start_activity"
+        android:textAllCaps="true"
+        android:textColor="@color/colorBlue"
+        android:textSize="22sp"
+        android:fontFamily="@font/medium"
+        app:layout_constraintBottom_toBottomOf="@id/btnStart"
+        app:layout_constraintEnd_toEndOf="@id/btnStart"
+        app:layout_constraintStart_toStartOf="@id/btnStart"
+        app:layout_constraintTop_toTopOf="@id/btnStart" />
+
+<!--    <ImageView-->
+<!--        android:id="@+id/btnReferral"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        android:src="@drawable/ic_agent_icon"-->
+<!--        app:layout_constraintStart_toStartOf="@id/vCard"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/vCard" />-->
+
+    <ProgressBar
+        android:id="@+id/vProgress"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:maxWidth="150dp"
+        android:maxHeight="150dp"
+        android:minWidth="150dp"
+        android:minHeight="150dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

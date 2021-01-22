@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1001639560310",
+    "project_id": "wl-app-2038d",
+    "storage_bucket": "wl-app-2038d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1001639560310:android:50ad2fb69a8486f4330b57",
+        "android_client_info": {
+          "package_name": "com.enecuum.wl"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1001639560310-tim014sie7c7r7106o8umtfgg8r9o4hf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDIlFUbDK9g3Oc0E8bKHa2HuPppY3nDryc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1001639560310-tim014sie7c7r7106o8umtfgg8r9o4hf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

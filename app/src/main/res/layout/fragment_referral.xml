@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryLight"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/vToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        app:elevation="16dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/btnBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:src="@drawable/ic_action_back"
+                app:tint="@color/colorBlack"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/referral_program"
+                android:textColor="@color/colorBlue"
+                android:textSize="22sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+<!--    <View-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="6dp"-->
+<!--        android:background="@drawable/shadow"-->
+<!--        android:rotation="180"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/vToolbar" />-->
+
+    <TextView
+        android:id="@+id/lblReferral"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="Referral code"
+        android:textColor="@color/colorBlack"
+        android:textSize="22sp"
+        app:layout_constraintTop_toBottomOf="@id/vToolbar"
+        app:layout_constraintBottom_toTopOf="@id/txtReferral"
+        app:layout_constraintVertical_chainStyle="packed"/>
+
+    <EditText
+        android:id="@+id/txtReferral"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/rectangle_left_round_settings"
+        android:ellipsize="end"
+        android:gravity="center_horizontal"
+        android:imeOptions="actionDone"
+        android:inputType="text"
+        android:singleLine="true"
+        android:paddingStart="4dp"
+        android:paddingTop="12dp"
+        android:paddingEnd="60dp"
+        android:paddingBottom="12dp"
+        android:text=""
+        android:textColor="@color/colorBlack"
+        android:textSize="20sp"
+        android:theme="@style/AccentTheme"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/imgScan"
+        app:layout_constraintTop_toBottomOf="@id/lblReferral"
+        app:layout_constraintBottom_toTopOf="@id/lblReferralDescription"/>
+
+    <ImageView
+        android:id="@+id/imgScan"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/rectangle_right_round_settings"
+        app:tint="@color/colorBlack"
+        android:src="@drawable/ic_qrcode_scan_white_48dp"
+        app:layout_constraintBottom_toBottomOf="@id/txtReferral"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/txtReferral"/>
+
+    <TextView
+        android:id="@+id/lblReferralDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:gravity="center"
+        android:text="@string/referral_skip_message"
+        android:textColor="@color/colorBlack"
+        android:textSize="22sp"
+        app:layout_constraintTop_toBottomOf="@id/txtReferral"
+        app:layout_constraintBottom_toTopOf="@id/btnAction"/>
+
+    <TextView
+        android:id="@+id/btnAction"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="96dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="96dp"
+        android:background="@drawable/pill_blue"
+        android:gravity="center"
+        android:text="@string/skip"
+        android:textColor="@color/colorWhite"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/lblReferralDescription"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleLarge"
+        android:id="@+id/vProgress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:maxHeight="150dp"
+        android:minHeight="150dp"
+        android:maxWidth="150dp"
+        android:minWidth="150dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

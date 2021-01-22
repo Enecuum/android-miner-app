@@ -1,0 +1,179 @@
+<!DOCTYPE resources [
+    <!ENTITY ticker "COIN">
+    <!ENTITY name "Coin">
+    <!ENTITY logo "Wallet">
+    <!ENTITY url "https://www.coin.example">]>
+
+<resources>
+    <string name="app_name">&name;</string>
+
+    <string name="balance">Balance:</string>
+    <string name="enq">&name;</string>
+    <string name="start_activity">start</string>
+    <string name="stop_activity">stop</string>
+    <string name="connecting_btn">connecting</string>
+
+    <string name="your_address">Your Address</string>
+    <string name="your_private_key">Your Private Key</string>
+    <string name="copy_your_private_key">COPY YOUR PRIVATE KEY</string>
+    <string name="copied_private_key">Private key copied to clipboard</string>
+    <string name="copied_address">Address copied to clipboard</string>
+    <string name="copy">Copy</string>
+
+    <string name="start_using_wallet">Start Using Wallet</string>
+
+    <string name="private_key">Private key</string>
+    <string name="private_key_import_hint">Enter Your Private Key To Import</string>
+    <string name="private_key_hint">Enter Your Private Key</string>
+    <string name="signin">Sign In</string>
+
+    <string name="create_new_wallet">Create New Wallet</string>
+    <string name="import_wallet">Import wallet</string>
+
+    <string name="settings">Settings</string>
+    <string name="about">About App</string>
+    <string name="my_address">My Address</string>
+    <string name="community">Community</string>
+    <string name="entry_point">Entry Point</string>
+    <string name="entry_point_url">Entry point URL</string>
+    <string name="save_url">Save url</string>
+
+    <string name="about_app_title">&name; mobile application</string>
+
+    <string name="about_site">&url;</string>
+    <string name="about_white_paper">White paper: &url;/files/pdf/wp.pdf</string>
+    <string name="about_version">Trinity Protocol version: 4.0.0</string>
+    <string name="about_tech">Tech paper: &url;/files/tp_en.pdf</string>
+    <string name="about_terms">Terms and conditions: &url;/docs/terms.pdf</string>
+    <string name="about_privacy">Privacy policy: <u color="#7380F2">&url;/docs/privacy.pdf</u></string>
+
+    <string name="import_key_warning">Warning!!!\nYour current Private Key will be deleted from the device memory after importing the new one.\nPlease be sure to have a backup copy</string>
+
+    <string name="faq_battery_title">Battery life</string>
+    <string name="faq_battery">In terms of СPU/GPU usage PoA node does not carry out mining in the ordinary Proof-of-Work way. Instead &name; PoA mobile node performs cryptographic validations and signings which is similar to the process during opening a web site via https (secure connection). As a result the battery usage by &name; mobile app is comparable to mobile browser or chat work. You never think about battery life choosing secure chat or secure web site over unsecure, right?</string>
+    <string name="faq_network_title">Network usage</string>
+    <string name="faq_network">The analogy with browser continues speaking of the Internet traffic usage by &name; app. You probably do not watch YouTube or download movies via mobile network so with &name; — we recommend to start PoA activity connected to a WiFi spot if you have limited or payable data plan. Actual consumed traffic volume depends on the network load and the number of online PoA participants and aimed to be light in the future mainnet achievable by rewards/fees stimulation. But during testnet activities traffic volume is not guaranteed to be persistent and predictable.</string>
+    <string name="faq_support_title">Support</string>
+    <string name="faq_support"><![CDATA[Feel free to ask for help in the <u><a href="https://t.me/example">Telegram group</a></u>]]></string>
+    <string name="disclaimer">Private Key is used to unlock your wallet providing funds management.\n
+        Please make sure to save your private key and prevent it from stealing. &name; do not store your private key. In case of private key loss we will not be able to recover it. &name; is not responsible for any inconveniences caused by the private key loss.</string>
+
+
+    <string name="no_enq">No &ticker; yet…</string>
+    <string name="loading_balance">Loading balance…</string>
+    <string name="connecting">Connecting…</string>
+    <!--    <string name="balance_val">Balance: %s %s</string>-->
+    <string name="continue_mining">♔ Keep Calm and Continue Mining</string>
+
+    <string name="no_internet">No internet</string>
+    <string name="import_new_private_key">Import new Private Key</string>
+    <string name="empty_private_key">Empty Private Key!</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+
+    <string name="update_now">Update now</string>
+    <string name="update_required">Update required</string>
+    <string name="critical_update_description">An update to &ticker; is required to continue</string>
+    <string name="faq">FAQ</string>
+    <string name="pos_nodes">PoS nodes</string>
+    <string name="pow_nodes">PoW nodes</string>
+    <string name="poa_nodes">PoA nodes</string>
+    <string name="enq_blockchain_ex">Blockchain Explorer</string>
+    <string name="max_tps">Max TPS</string>
+    <string name="curr_tps">Current TPS</string>
+    <string name="accouts">Accounts</string>
+    <string name="open_in_browser">open in browser</string>
+    <string name="map_loading">Map loading</string>
+
+    <array name="language_list">
+        <item>English</item>
+        <item>Русский</item>
+    </array>
+
+    <array name="language_subtitle_list">
+        <item>English</item>
+        <item>Russian</item>
+    </array>
+
+    <array name="language_code">
+        <item>en</item>
+        <item>ru</item>
+    </array>
+
+
+    <string name="application_restart" translatable="false">Application will be closed. Settings will be applied after restart</string>
+    <string name="execute" translatable="false">Execute</string>
+    <string name="cancel">Cancel</string>
+    <string name="are_you_sure">Are you sure?</string>
+    <string name="language">Language</string>
+    <string name="send">Send</string>
+    <string name="receive">Receive</string>
+    <string name="swap">SWAP</string>
+    <string name="send_confirmation">Send Confirmation</string>
+    <string name="amount">Amount</string>
+    <string name="commission_text">1 &ticker; will be used as fee</string>
+    <string name="enq_address_to_send">&ticker; address to send</string>
+    <string name="reject">Reject</string>
+    <string name="confirm">Confirm</string>
+    <string name="share_qr">Share QR Code</string>
+    <string name="to">TO</string>
+    <string name="max">MAX</string>
+    <string name="balance_enq">Balance: %s &ticker;</string>
+    <string name="wrong_format">Incorrect value</string>
+    <string name="transaction_result">Transaction result</string>
+    <string name="transactions">Transactions</string>
+    <string name="rewards">Rewards</string>
+    <string name="success">Success</string>
+    <string name="ok" translatable="false">OK</string>
+    <string name="error">Error</string>
+    <string name="zero_amount">Zero amount</string>
+    <string name="amount_too_big">Too much for your balance</string>
+    <string name="wrong_secret_key_format">Should be hexadecimal string at least 64 characters long</string>
+    <string name="zero_balance">Zero balance</string>
+    <string name="buy_enq">Buy &ticker;</string>
+    <string name="next">Next</string>
+    <string name="skip">Skip</string>
+
+    <string name="referral_buy_title">Referral program</string>
+    <string name="referral_buy_message">Once you earn %s &ticker;, you will be able to share your agent referral code. The code can be used by other users to get more &ticker; providing you passive income.</string>
+    <string name="referral_title">Congratulations!</string>
+    <string name="referral_message">You\'ve unlocked your personal agent referral code! Share it with other users to receive 5% of their mining rewards. They will mine &ticker; and provide you passive income!\n</string>
+    <string name="share_code">Share code</string>
+    <string name="referral_not_enough">Not enough &ticker; at referred account</string>
+    <string name="referral_skip_message">With referral code you will earn more tokens!</string>
+    <string name="referral_next_message">Your Referral program earnings will be shown in Blockchain Explorer</string>
+    <string name="referral_same_address">Referred address should be different from yours</string>
+    <string name="referral_program">Referral program</string>
+
+    <string name="enq_value" translatable="false">%s &ticker;</string>
+    <string name="enq_value_cut" translatable="false">\u00A0&ticker;</string>
+    <string name="dollar_value" translatable="false">%s $</string>
+    <string name="percent_value" translatable="false">%s %%</string>
+    <string name="min_value" translatable="false">min %s</string>
+    <string name="max_value" translatable="false">max %s</string>
+    <string name="roi_daily">Daily</string>
+    <string name="roi_weekly">Weekly</string>
+    <string name="roi_monthly">Monthly</string>
+    <string name="roi_annual">Yearly</string>
+    <string name="min_stake_dialog_title">Minimum stake is %s &ticker;</string>
+    <string name="min_stake_dialog_message">A deposit of at least %s &ticker; is required to start mining.</string>
+    <string name="roi_alert">Return rate calculator last 24 hours</string>
+    <string name="stake" translatable="false">Stake</string>
+    <string name="roi" translatable="false">ROI</string>
+    <string name="enq_as_usd" translatable="false">1 &ticker; = $ %s</string>
+    <string name="max_roi">Max ROI: %s %% at %s &ticker; stake</string>
+    <string name="save">Save</string>
+    <string name="qr_saved">QRCode saved into Gallery</string>
+
+    <string name="ellipsis_placeholder" translatable="false">...</string>
+
+    <string name="referral_tick">I\'m a referral</string>
+
+    <string name="message_keypair_already_exists" translatable="false">&name; keypair already exists in keystore</string>
+    <string name="message_keypair_does_not_exist" translatable="false">&name; keypair doesn\'t exist in keystore</string>
+    <string name="message_problem_encryption" translatable="false">Encryption exception</string>
+
+    <string name="ticker">&ticker;</string>
+    <string name="nc_usdt">&ticker; / USDT</string>
+    <string name="logo_name">&logo;</string>
+</resources>

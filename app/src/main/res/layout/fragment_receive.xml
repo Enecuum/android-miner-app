@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryLight">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="16dp">
+
+        <ImageView
+            android:id="@+id/imgQrAddress"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:layout_marginTop="48dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btnCopy" />
+
+        <TextView
+            android:id="@+id/btnCopy"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="96dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="96dp"
+            android:background="@drawable/pill_blue"
+            android:gravity="center"
+            android:text="@string/copy"
+            android:textColor="@color/colorWhite"
+            android:textSize="18sp"
+            app:layout_constraintTop_toBottomOf="@id/lblAddress" />
+
+        <TextView
+            android:id="@+id/lblAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="16dp"
+            android:ellipsize="end"
+            android:gravity="center_horizontal"
+            android:lines="1"
+            android:paddingStart="4dp"
+            android:paddingTop="8dp"
+            android:paddingEnd="4dp"
+            android:paddingBottom="8dp"
+            android:text=""
+            android:textColor="@color/textColorWhiteSemitransparent"
+            android:textSize="14sp"
+            android:theme="@style/AccentTheme"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/btnShare"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="96dp"
+            android:layout_marginTop="48dp"
+            android:layout_marginEnd="96dp"
+            android:background="@drawable/pill_blue"
+            android:gravity="center"
+            android:text="@string/share_qr"
+            android:textColor="@color/colorWhite"
+            android:textSize="18sp"
+            app:layout_constraintTop_toBottomOf="@id/imgQrAddress" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

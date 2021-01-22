@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:custom="http://schemas.android.com/tools"
+    android:background="@color/colorPrimaryLight">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="16dp">
+
+        <TextView
+            android:id="@+id/lblBalance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@color/colorWhite"
+            android:ellipsize="end"
+            android:gravity="center_horizontal"
+            android:lines="1"
+            android:paddingStart="4dp"
+            android:paddingTop="12dp"
+            android:paddingEnd="4dp"
+            android:paddingBottom="12dp"
+            android:text="..."
+            android:textColor="@color/textColorWhiteSemitransparent"
+            android:textSize="16sp"
+            android:theme="@style/AccentTheme"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/lblTo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:textAllCaps="true"
+            android:text="@string/to"
+            android:textColor="@color/textColorWhiteSemitransparent"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@id/lblBalance" />
+
+        <EditText
+            android:id="@+id/txtTo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/rectangle_round_settings"
+            android:ellipsize="end"
+            android:gravity="center_horizontal"
+            android:imeOptions="actionDone"
+            android:inputType="text"
+            android:lines="1"
+            android:paddingStart="4dp"
+            android:paddingTop="12dp"
+            android:paddingEnd="4dp"
+            android:paddingBottom="12dp"
+            android:text=""
+            android:textColor="@color/textColorWhiteSemitransparent"
+            android:textSize="20sp"
+            android:theme="@style/AccentTheme"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/imgScan"
+            app:layout_constraintTop_toBottomOf="@id/lblTo" />
+
+        <ImageView
+            android:id="@+id/imgScan"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/rectangle_right_round_settings"
+            android:src="@drawable/ic_qrcode_scan_white_48dp"
+            app:tint="@color/colorBlack"
+            app:layout_constraintBottom_toBottomOf="@id/txtTo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/txtTo" />
+
+        <TextView
+            android:id="@+id/lblAmount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            android:gravity="center"
+            android:text="@string/amount"
+            android:textAllCaps="true"
+            android:textColor="@color/textColorWhiteSemitransparent"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@id/txtTo" />
+
+        <EditText
+            android:id="@+id/txtAmount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/rectangle_round_settings"
+            android:ellipsize="end"
+            android:gravity="center_horizontal"
+            android:imeOptions="actionDone"
+            android:inputType="numberDecimal"
+            android:lines="1"
+            android:paddingStart="4dp"
+            android:paddingTop="12dp"
+            android:paddingEnd="4dp"
+            android:paddingBottom="12dp"
+            android:text="0.0000000000"
+            android:textColor="@color/textColorWhiteSemitransparent"
+            android:textSize="20sp"
+            android:theme="@style/AccentTheme"
+            app:layout_constraintTop_toBottomOf="@id/lblAmount" />
+
+        <TextView
+            android:id="@+id/lblCommission"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="@string/commission_text"
+            android:textAllCaps="true"
+            android:textColor="@color/textColorWhiteSemitransparent"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@id/txtAmount" />
+
+        <TextView
+            android:id="@+id/lblZero"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="36dp"
+            android:text="0"
+            android:textColor="@color/textColorWhiteSemitransparent"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/lblCommission" />
+
+        <TextView
+            android:id="@+id/lblMax"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:layout_marginEnd="16dp"
+            android:text="@string/max"
+            android:textColor="@color/textColorWhiteSemitransparent"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/lblCommission" />
+
+        <SeekBar
+            android:id="@+id/sbAmount"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:thumb="@drawable/circle_blue"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@id/lblZero"
+            app:layout_constraintEnd_toStartOf="@id/lblMax"
+            app:layout_constraintStart_toEndOf="@id/lblZero"
+            app:layout_constraintTop_toTopOf="@id/lblZero" />
+
+        <com.warkiz.widget.IndicatorSeekBar
+            android:id="@+id/sbAmountBar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:drawingCacheQuality="high"
+            android:paddingTop="20dp"
+            android:paddingBottom="8dp"
+            app:isb_max="100"
+            app:isb_min="0"
+            app:isb_seek_smoothly="true"
+            app:isb_show_indicator="none"
+            app:isb_thumb_drawable="@drawable/circle_blue"
+            app:isb_track_progress_color="@color/colorAccent"
+            app:isb_track_progress_size="5dp"
+            app:isb_track_rounded_corners="true"
+            app:layout_constraintBottom_toBottomOf="@id/lblZero"
+            app:layout_constraintEnd_toStartOf="@id/lblMax"
+            app:layout_constraintStart_toEndOf="@id/lblZero"
+            app:layout_constraintTop_toTopOf="@id/lblZero"/>
+
+        <TextView
+            android:id="@+id/btnSend"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="96dp"
+            android:layout_marginTop="48dp"
+            android:layout_marginEnd="96dp"
+            android:background="@drawable/pill_blue"
+            android:gravity="center"
+            android:text="@string/send"
+            android:textColor="@color/colorWhite"
+            android:textSize="18sp"
+            app:layout_constraintTop_toBottomOf="@id/sbAmountBar" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

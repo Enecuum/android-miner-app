@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/vToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        app:elevation="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/scrollView">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/btnBackTop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:src="@drawable/ic_action_back"
+                app:tint="@color/colorBlack"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:text="@string/logo_name"
+                android:textSize="26dp"
+                android:fontFamily="@font/chanel_400"
+                android:textColor="@color/colorBlue"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+<!--    <View-->
+<!--        android:id="@+id/view2"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="6dp"-->
+<!--        android:background="@drawable/shadow"-->
+<!--        android:rotation="180"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/vToolbar" />-->
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        android:scrollbarThumbVertical="@color/colorAccent60"
+        android:background="@color/colorPrimaryLight"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vToolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp">
+
+                <TextView
+                    android:id="@+id/logo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="EXCHANGE"
+                    android:textSize="40sp"
+                    android:textColor="@color/colorBlack"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_chainStyle="packed" />
+
+<!--                <TextView-->
+<!--                    android:id="@+id/btnKucoinBtc"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:padding="10dp"-->
+<!--                    android:text="@string/ticker_btc"-->
+<!--                    android:textColor="@color/colorBlack"-->
+<!--                    app:layout_constraintEnd_toStartOf="@id/delimiter4"-->
+<!--                    app:layout_constraintHorizontal_chainStyle="packed"-->
+<!--                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                    app:layout_constraintTop_toBottomOf="@id/logoKucoin" />-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/delimiter4"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:padding="10dp"-->
+<!--                    android:text="|"-->
+<!--                    android:textColor="@color/colorBlack"-->
+<!--                    app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                    app:layout_constraintEnd_toStartOf="@id/btnKucoinUsd"-->
+<!--                    app:layout_constraintHorizontal_bias="0.5"-->
+<!--                    app:layout_constraintHorizontal_chainStyle="packed"-->
+<!--                    app:layout_constraintStart_toEndOf="@id/btnKucoinBtc"-->
+<!--                    app:layout_constraintTop_toBottomOf="@+id/logoKucoin" />-->
+
+                <TextView
+                    android:id="@+id/pair"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="@string/nc_usdt"
+                    android:textColor="@color/colorBlack"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    app:layout_constraintTop_toBottomOf="@id/logo" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+<!--            <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="200dp">-->
+
+<!--                <ImageView-->
+<!--                    android:id="@+id/logoCrex"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:padding="20dp"-->
+<!--                    android:src="@drawable/logo_crex24"-->
+<!--                    app:layout_constraintBottom_toTopOf="@+id/btnCrexUsd"-->
+<!--                    app:layout_constraintEnd_toEndOf="parent"-->
+<!--                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                    app:layout_constraintTop_toTopOf="parent"-->
+<!--                    app:layout_constraintVertical_chainStyle="packed" />-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/btnCrexBtc"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:padding="10dp"-->
+<!--                    android:text="ENQ/BTC"-->
+<!--                    android:textColor="@color/colorBlack"-->
+<!--                    app:layout_constraintEnd_toStartOf="@id/delimiter2"-->
+<!--                    app:layout_constraintHorizontal_chainStyle="packed"-->
+<!--                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                    app:layout_constraintTop_toBottomOf="@id/logoCrex" />-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/delimiter2"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:padding="10dp"-->
+<!--                    android:text="|"-->
+<!--                    android:textColor="@color/colorBlack"-->
+<!--                    app:layout_constraintEnd_toStartOf="@id/btnCrexUsd"-->
+<!--                    app:layout_constraintHorizontal_chainStyle="packed"-->
+<!--                    app:layout_constraintStart_toEndOf="@id/btnCrexBtc"-->
+<!--                    app:layout_constraintTop_toBottomOf="@id/logoCrex" />-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/btnCrexUsd"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:padding="10dp"-->
+<!--                    android:text="ENQ/USD"-->
+<!--                    android:textColor="@color/colorBlack"-->
+<!--                    app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                    app:layout_constraintEnd_toStartOf="@+id/delimiter3"-->
+<!--                    app:layout_constraintStart_toEndOf="@+id/delimiter2"-->
+<!--                    app:layout_constraintTop_toBottomOf="@+id/logoCrex" />-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/delimiter3"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:padding="10dp"-->
+<!--                    android:text="|"-->
+<!--                    android:textColor="@color/colorBlack"-->
+<!--                    app:layout_constraintEnd_toStartOf="@id/btnCrexRub"-->
+<!--                    app:layout_constraintHorizontal_chainStyle="packed"-->
+<!--                    app:layout_constraintStart_toEndOf="@id/btnCrexUsd"-->
+<!--                    app:layout_constraintTop_toBottomOf="@id/logoCrex" />-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/btnCrexRub"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:padding="10dp"-->
+<!--                    android:text="ENQ/RUB"-->
+<!--                    android:textColor="@color/colorBlack"-->
+<!--                    app:layout_constraintEnd_toEndOf="parent"-->
+<!--                    app:layout_constraintHorizontal_chainStyle="packed"-->
+<!--                    app:layout_constraintStart_toEndOf="@id/delimiter3"-->
+<!--                    app:layout_constraintTop_toBottomOf="@id/logoCrex" />-->
+<!--            </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+
+<!--            <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="200dp">-->
+
+<!--                <ImageView-->
+<!--                    android:id="@+id/logoGraviex"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:padding="20dp"-->
+<!--                    android:src="@drawable/logo_graviex"-->
+<!--                    app:layout_constraintBottom_toTopOf="@+id/btnGraviexEth"-->
+<!--                    app:layout_constraintEnd_toEndOf="parent"-->
+<!--                    app:layout_constraintHorizontal_bias="0.5"-->
+<!--                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                    app:layout_constraintTop_toTopOf="parent"-->
+<!--                    app:layout_constraintVertical_chainStyle="packed" />-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/btnGraviexBtc"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:padding="10dp"-->
+<!--                    android:text="ENQ/BTC"-->
+<!--                    android:textColor="@color/colorBlack"-->
+<!--                    app:layout_constraintEnd_toStartOf="@id/delimiter"-->
+<!--                    app:layout_constraintHorizontal_chainStyle="packed"-->
+<!--                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                    app:layout_constraintTop_toBottomOf="@id/logoGraviex" />-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/delimiter"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:padding="10dp"-->
+<!--                    android:text="|"-->
+<!--                    android:textColor="@color/colorBlack"-->
+<!--                    app:layout_constraintEnd_toStartOf="@id/btnGraviexEth"-->
+<!--                    app:layout_constraintHorizontal_chainStyle="packed"-->
+<!--                    app:layout_constraintStart_toEndOf="@id/btnGraviexBtc"-->
+<!--                    app:layout_constraintTop_toBottomOf="@id/logoGraviex" />-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/btnGraviexEth"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:padding="10dp"-->
+<!--                    android:text="ENQ/ETH"-->
+<!--                    android:textColor="@color/colorBlack"-->
+<!--                    app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                    app:layout_constraintEnd_toStartOf="@id/delimiter1"-->
+<!--                    app:layout_constraintHorizontal_bias="0.5"-->
+<!--                    app:layout_constraintHorizontal_chainStyle="packed"-->
+<!--                    app:layout_constraintStart_toEndOf="@id/delimiter"-->
+<!--                    app:layout_constraintTop_toBottomOf="@+id/logoGraviex" />-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/delimiter1"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:padding="10dp"-->
+<!--                    android:text="|"-->
+<!--                    android:textColor="@color/colorBlack"-->
+<!--                    app:layout_constraintEnd_toStartOf="@id/btnGraviexUsd"-->
+<!--                    app:layout_constraintHorizontal_chainStyle="packed"-->
+<!--                    app:layout_constraintStart_toEndOf="@id/btnGraviexEth"-->
+<!--                    app:layout_constraintTop_toBottomOf="@id/logoGraviex" />-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/btnGraviexUsd"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:padding="10dp"-->
+<!--                    android:text="ENQ/USDT"-->
+<!--                    android:textColor="@color/colorBlack"-->
+<!--                    app:layout_constraintEnd_toEndOf="parent"-->
+<!--                    app:layout_constraintHorizontal_chainStyle="packed"-->
+<!--                    app:layout_constraintStart_toEndOf="@id/delimiter1"-->
+<!--                    app:layout_constraintTop_toBottomOf="@id/logoGraviex" />-->
+<!--            </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+
+<!--            <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="200dp">-->
+
+<!--                <ImageView-->
+<!--                    android:id="@+id/logoCoinExchange"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:padding="20dp"-->
+<!--                    android:src="@drawable/logo_coinexchange"-->
+<!--                    app:layout_constraintBottom_toTopOf="@+id/delimiter5"-->
+<!--                    app:layout_constraintEnd_toEndOf="parent"-->
+<!--                    app:layout_constraintHorizontal_bias="0.5"-->
+<!--                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                    app:layout_constraintTop_toTopOf="parent"-->
+<!--                    app:layout_constraintVertical_chainStyle="packed" />-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/btnCoinExchangeBtc"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:padding="10dp"-->
+<!--                    android:text="ENQ/BTC"-->
+<!--                    android:textColor="@color/colorBlack"-->
+<!--                    app:layout_constraintEnd_toStartOf="@id/delimiter5"-->
+<!--                    app:layout_constraintHorizontal_chainStyle="packed"-->
+<!--                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                    app:layout_constraintTop_toBottomOf="@id/logoCoinExchange" />-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/delimiter5"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:padding="10dp"-->
+<!--                    android:text="|"-->
+<!--                    android:textColor="@color/colorBlack"-->
+<!--                    app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                    app:layout_constraintEnd_toStartOf="@id/btnCoinExchangeEth"-->
+<!--                    app:layout_constraintHorizontal_bias="0.5"-->
+<!--                    app:layout_constraintHorizontal_chainStyle="packed"-->
+<!--                    app:layout_constraintStart_toEndOf="@id/btnCoinExchangeBtc"-->
+<!--                    app:layout_constraintTop_toBottomOf="@+id/logoCoinExchange" />-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/btnCoinExchangeEth"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:padding="10dp"-->
+<!--                    android:text="ENQ/ETH"-->
+<!--                    android:textColor="@color/colorBlack"-->
+<!--                    app:layout_constraintEnd_toEndOf="parent"-->
+<!--                    app:layout_constraintHorizontal_chainStyle="packed"-->
+<!--                    app:layout_constraintStart_toEndOf="@id/delimiter5"-->
+<!--                    app:layout_constraintTop_toBottomOf="@id/logoCoinExchange" />-->
+<!--            </androidx.constraintlayout.widget.ConstraintLayout>-->
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

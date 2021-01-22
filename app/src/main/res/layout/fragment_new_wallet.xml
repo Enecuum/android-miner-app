@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical">
+
+<!--    <View-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="6dp"-->
+<!--        android:background="@drawable/shadow"-->
+<!--        android:rotation="180"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/vToolbar" />-->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/colorPrimaryLight"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/vToolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/lblPublicKeyTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="48dp"
+                android:layout_marginEnd="16dp"
+                android:ellipsize="end"
+                android:gravity="center_horizontal"
+                android:lines="1"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
+                android:text="@string/your_address"
+                android:textColor="@color/colorBlue"
+                android:textSize="16sp"
+                android:theme="@style/AccentTheme" />
+
+            <TextView
+                android:id="@+id/lblPublicKey"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/rectangle_round_settings"
+                android:ellipsize="end"
+                android:gravity="center_horizontal"
+                android:lines="1"
+                android:paddingStart="4dp"
+                android:paddingTop="16dp"
+                android:paddingEnd="4dp"
+                android:paddingBottom="16dp"
+                android:text="..."
+                android:textColor="@color/colorBlue"
+                android:textSize="12sp"
+                android:theme="@style/AccentTheme" />
+
+            <TextView
+                android:id="@+id/lblSecretKeyTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="48dp"
+                android:layout_marginEnd="16dp"
+                android:ellipsize="end"
+                android:gravity="center_horizontal"
+                android:lines="1"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
+                android:text="@string/your_private_key"
+                android:textColor="@color/colorBlue"
+                android:textSize="16sp"
+                android:theme="@style/AccentTheme" />
+
+            <TextView
+                android:id="@+id/lblSecretKey"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/rectangle_round_settings"
+                android:ellipsize="end"
+                android:gravity="center_horizontal"
+                android:lines="1"
+                android:paddingStart="4dp"
+                android:paddingTop="16dp"
+                android:paddingEnd="4dp"
+                android:paddingBottom="16dp"
+                android:text="..."
+                android:textColor="@color/colorBlue"
+                android:textSize="12sp"
+                android:theme="@style/AccentTheme" />
+
+            <TextView
+                android:id="@+id/btnSecretKeyCopy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="18dp"
+                android:layout_marginEnd="16dp"
+                android:ellipsize="end"
+                android:gravity="center_horizontal"
+                android:maxLines="2"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
+                android:text="@string/copy_your_private_key"
+                android:textColor="@color/textColorWhiteSemitransparent"
+                android:textSize="16sp"
+                android:theme="@style/AccentTheme" />
+
+            <TextView
+                android:id="@+id/btnStartUsingWallet"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="64dp"
+                android:layout_marginTop="48dp"
+                android:layout_marginEnd="64dp"
+                android:background="@drawable/pill_blue"
+                android:gravity="center"
+                android:text="@string/start_using_wallet"
+                android:textColor="@color/colorWhite"
+                android:textSize="18sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="16dp" />
+
+            <TextView
+                android:id="@+id/lblDisclaimer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="48dp"
+                android:layout_marginTop="18dp"
+                android:layout_marginEnd="48dp"
+                android:ellipsize="end"
+                android:gravity="center_horizontal"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
+                android:paddingBottom="16dp"
+                android:text="@string/disclaimer"
+                android:textColor="@color/textColorWhiteSemitransparent"
+                android:textSize="14sp"
+                android:theme="@style/AccentTheme" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/vToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryLight"
+        app:elevation="16dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/btnBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:src="@drawable/ic_action_back"
+                app:tint="@color/colorBlack"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:lines="1"
+                android:text="@string/logo_name"
+                android:textSize="26sp"
+                android:fontFamily="@font/chanel_400"
+                android:textColor="@color/colorBlue"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+</androidx.constraintlayout.widget.ConstraintLayout>

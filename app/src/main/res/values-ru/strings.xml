@@ -1,0 +1,139 @@
+<!DOCTYPE resources [
+    <!ENTITY ticker "COIN">
+    <!ENTITY name "Coin">
+    <!ENTITY logo "Wallet">
+    <!ENTITY url "https://www.coin.example">]>
+
+<resources>
+    <string name="app_name">&name;</string>
+
+    <string name="balance">Баланс:</string>
+    <string name="enq">&name;</string>
+    <string name="start_activity">начать работу</string>
+    <string name="stop_activity">остановить работу</string>
+    <string name="connecting_btn">соединение</string>
+
+    <string name="your_address">Ваш адрес</string>
+    <string name="your_private_key">Ваш приватный ключ</string>
+    <string name="copy_your_private_key">КОПИРОВАТЬ ВАШ ПРИВАТНЫЙ КЛЮЧ</string>
+    <string name="copied_private_key">Приватный ключ скопирован в буфер обмена</string>
+    <string name="copied_address">Адрес скопирован в буфер обмена</string>
+    <string name="copy">Копировать</string>
+
+    <string name="start_using_wallet">Начать использование</string>
+
+    <string name="private_key">Приватный ключ</string>
+    <string name="private_key_import_hint">Введите Ваш приватный ключ для импорта</string>
+    <string name="private_key_hint">Введите Ваш приватный ключ </string>
+    <string name="signin">Войти</string>
+
+    <string name="create_new_wallet">Создать новый кошелек</string>
+    <string name="import_wallet">Импортировать кошелек</string>
+
+    <string name="settings">Настройки</string>
+    <string name="about">О приложении</string>
+    <string name="my_address">Мой адрес</string>
+    <string name="community">Сообщество</string>
+    <string name="entry_point">Точка входа</string>
+    <string name="entry_point_url">URL точки входа</string>
+    <string name="save_url">Сохранить URL</string>
+
+    <string name="about_app_title">Мобильное приложение &name;.</string>
+
+    <string name="about_site">&url;</string>
+    <string name="about_white_paper">Официальный документ: &url;/files/pdf/wp.pdf</string>
+    <string name="about_version">Версия протокола Trinity: 4.0.0</string>
+    <string name="about_tech">Технический документ: &url;/files/tp_en.pdf</string>
+    <string name="about_terms">Условия использования: &url;/docs/terms.pdf</string>
+    <string name="about_privacy">Политика конфиденциальности: <u color="#7380F2">&url;/docs/privacy.pdf</u></string>
+
+    <string name="import_key_warning">Предупреждение!!!\nВаш текущий приватный ключ будет удален из памяти устройства после импорта нового ключа.\nУбедитесь, что у вас есть резервная копия.</string>
+
+    <string name="faq_battery_title">Заряд батареи</string>
+    <string name="faq_battery">С точки зрения использования CPU / GPU, PoA-узел не выполняет майнинг обычным способом Proof-of-Work. Вместо этого мобильный узел &name; PoA выполняет криптографические проверки и подписи, что аналогично процессу при открытии веб-сайта через https (безопасное соединение). В результате использование батареи мобильным приложением &name; сравнимо с работой мобильного браузера или чата. Вы никогда не задумываетесь о времени автономной работы, выбирая безопасный чат или веб-сайт вместо незащищенного, верно?</string>
+    <string name="faq_network_title">Использование сети</string>
+    <string name="faq_network">Говоря об использовании интернет-трафика приложением &name;, можно продолжить аналогию с браузером. Возможно, вы не смотрите YouTube и не скачиваете фильмы через мобильную сеть, если у вас ограниченный или платный тарифный план. Так и с &name;: мы рекомендуем запускать PoA-активность, подключившись к точке доступа WiFi, в подобных случаях. Фактический объем потребляемого трафика зависит от загруженности сети и количества онлайн-участников PoA и рассчитан быть легким в будущей основной сети, за счет стимулирования вознаграждениями/комиссиями. Но во время работы тестовой сети не гарантируется постоянный и предсказуемый объем трафика.</string>
+    <string name="faq_support_title">Поддержка</string>
+    <string name="faq_support"><![CDATA[Обращайтесь за помощью в <u><a href="https://t.me/example">группу Telegram</a></u>]]></string>
+    <string name="disclaimer">Приватный ключ необходим для разблокировки Вашего кошелька, который обеспечивает управление средствами, включая участие в программе Airdrop.\n
+         Пожалуйста, сохраните свой приватный ключ и предотвратите его кражу. &name; не хранит копии вашего приватного ключа. В случае потери приватного ключа мы не сможем его восстановить. &name; не несет ответственности за любые неудобства, вызванные потерей приватного ключа.</string>
+
+    <string name="no_enq">Пока нет &ticker;... </string>
+    <string name="loading_balance">Загружаем баланс…</string>
+    <string name="connecting">Соединение…</string>
+    <string name="continue_mining">♔ Сохраняйте Спокойствие и Продолжайте Майнинг</string>
+
+    <string name="no_internet">Нет интернета</string>
+    <string name="are_you_sure">Вы уверены?</string>
+    <string name="import_new_private_key">Импортировать новый Приватный Ключ</string>
+    <string name="empty_private_key">Пустой Приватный Ключ!</string>
+    <string name="yes">Да</string>
+    <string name="no">Нет</string>
+
+    <string name="update_now">Обновить сейчас</string>
+    <string name="update_required">Требуется обновление</string>
+    <string name="critical_update_description"> Для продолжения требуется обновление приложения &name;</string>
+    <string name="faq">FAQ</string>
+    <string name="pos_nodes">узлы PoS</string>
+    <string name="pow_nodes">узлы PoW</string>
+    <string name="poa_nodes">узлы PoA</string>
+    <string name="enq_blockchain_ex">Блокчейн эксплорер</string>
+    <string name="max_tps">Макс. TPS</string>
+    <string name="curr_tps">Текущее TPS</string>
+    <string name="accouts">Счета </string>
+    <string name="open_in_browser">Открыть в браузере</string>
+    <string name="map_loading">Загрузка карты</string>
+    <string name="language">Язык</string>
+    <string name="receive">Получить</string>
+    <string name="reject">Отклонить</string>
+    <string name="enq_address_to_send">Адрес для отправки</string>
+    <string name="error">Ошибка</string>
+    <string name="send">Отправить</string>
+    <string name="send_confirmation">Подтверждение Отправки</string>
+    <string name="success">Успешно</string>
+    <string name="swap">Обмен</string>
+    <string name="to">КУДА</string>
+    <string name="wrong_format">"Неверное значение "</string>
+    <string name="wrong_secret_key_format">Ключ должен быть шестнадцатеричной строкой длиной не менее 64 символов</string>
+    <string name="amount">Количество</string>
+    <string name="commission_text">1 &ticker; будет потрачен на комиссию</string>
+    <string name="amount_too_big">Слишком много для вашего баланса</string>
+    <string name="balance_enq">Баланс: %s &ticker;</string>
+    <string name="confirm">Подтвердить</string>
+    <string name="cancel">Отменить</string>
+    <string name="buy_enq">Купить &ticker;</string>
+    <string name="max">MAX</string>
+    <string name="transaction_result">"Результат транзакции "</string>
+    <string name="transactions">Транзакции</string>
+    <string name="rewards">Награды</string>
+    <string name="share_qr">"Поделиться QR-кодом "</string>
+    <string name="zero_amount">"Нулевое количество "</string>
+    <string name="zero_balance">Нулевой баланс</string>
+    <string name="min_stake_dialog_message">Чтобы начать майнинг, необходимо внести минимум %s &ticker;.</string>
+    <string name="min_stake_dialog_title">Минимальный стейк %S &ticker;</string>
+    <string name="roi_annual">В год</string>
+    <string name="roi_daily">В день</string>
+    <string name="roi_monthly">В месяц</string>
+    <string name="roi_weekly">В неделю</string>
+    <string name="roi_alert">Калькулятор доходности за последние 24 часа</string>
+    <string name="max_roi">"Max ROI: %s %% при стейке %s &ticker; "</string>
+    <string name="next">Далее</string>
+    <string name="save">Сохранить</string>
+    <string name="share_code">Поделиться кодом</string>
+    <string name="skip">Пропустить</string>
+    <string name="referral_title">Поздравляем!</string>
+    <string name="referral_skip_message">С реферальным кодом вы заработаете больше токенов!</string>
+    <string name="referral_same_address">Реферальный адрес должен отличаться от вашего</string>
+    <string name="referral_program">Реферальная программа</string>
+    <string name="referral_buy_title">Реферальная программа</string>
+    <string name="referral_not_enough">Недостаточно &ticker; на реферальном кошельке</string>
+    <string name="referral_next_message">Ваши доходы от реферальной программы будут показаны в Блокчейн эксплорере</string>
+    <string name="referral_message">Вы открыли Ваш личный реферальный код агента! Поделитесь им с другими
+        пользователями, чтобы получить 5% от их вознаграждений за майнинг. Они будут майнить &ticker; и обеспечат Вам
+        пассивный доход!\n
+    </string>
+    <string name="referral_buy_message">Как только вы заработаете %s &ticker;, Вы сможете разблокировать свой реферальный код
+        агента. Этот код может быть использован другими пользователями, чтобы получать больше &ticker;, предоставляя вам
+        пассивный доход.
+    </string>
+</resources>
